@@ -1,0 +1,812 @@
+[
+    {
+        "disease": "Seasonal Allergies",
+        "symptoms": [
+            "sneezing",
+            "runny nose",
+            "itchy eyes",
+            "nasal congestion",
+            "watery eyes",
+            "itchy throat",
+            "postnasal drip"
+        ],
+        "treatments": [
+            "Antihistamines",
+            "Nasal corticosteroids",
+            "Decongestants",
+            "Allergy shots",
+            "Avoid allergens",
+            "Air purifier"
+        ],
+        "causes": [
+            "pollen",
+            "dust mites",
+            "pet dander",
+            "mold spores",
+            "seasonal changes",
+            "genetic predisposition"
+        ],
+        "age_groups": [
+            "all"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "seasonal",
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "outdoor activities",
+            "pets",
+            "smoking"
+        ],
+        "environmental_factors": [
+            "pollen season",
+            "high humidity",
+            "air pollution"
+        ]
+    },
+    {
+        "disease": "Chronic Fatigue Syndrome",
+        "symptoms": [
+            "extreme fatigue",
+            "sleep problems",
+            "muscle pain",
+            "joint pain",
+            "headaches",
+            "memory problems",
+            "concentration difficulties",
+            "sore throat"
+        ],
+        "treatments": [
+            "Cognitive behavioral therapy",
+            "Graded exercise therapy",
+            "Sleep management",
+            "Pain relievers",
+            "Antidepressants",
+            "Lifestyle modifications"
+        ],
+        "causes": [
+            "viral infections",
+            "immune system problems",
+            "hormonal imbalances",
+            "stress",
+            "genetic factors"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "sedentary lifestyle",
+            "poor sleep",
+            "high stress"
+        ],
+        "environmental_factors": [
+            "viral exposure",
+            "stressful environment"
+        ]
+    },
+    {
+        "disease": "Irritable Bowel Syndrome",
+        "symptoms": [
+            "abdominal pain",
+            "bloating",
+            "diarrhea",
+            "constipation",
+            "gas",
+            "mucus in stool",
+            "urgency to defecate"
+        ],
+        "treatments": [
+            "Dietary changes",
+            "Fiber supplements",
+            "Probiotics",
+            "Antispasmodics",
+            "Antidepressants",
+            "Stress management"
+        ],
+        "causes": [
+            "food sensitivities",
+            "stress",
+            "gut bacteria changes",
+            "nervous system issues",
+            "intestinal inflammation"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "diet",
+            "stress",
+            "exercise",
+            "sleep"
+        ],
+        "environmental_factors": [
+            "food triggers",
+            "stressful situations"
+        ]
+    },
+    {
+        "disease": "Sleep Apnea",
+        "symptoms": [
+            "loud snoring",
+            "gasping during sleep",
+            "daytime sleepiness",
+            "morning headaches",
+            "difficulty concentrating",
+            "irritability",
+            "waking up frequently"
+        ],
+        "treatments": [
+            "CPAP machine",
+            "Lifestyle changes",
+            "Weight loss",
+            "Positional therapy",
+            "Oral appliances",
+            "Surgery"
+        ],
+        "causes": [
+            "obesity",
+            "narrow airway",
+            "large tonsils",
+            "genetics",
+            "alcohol use",
+            "smoking"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "obesity",
+            "alcohol",
+            "smoking",
+            "sedentary"
+        ],
+        "environmental_factors": [
+            "sleeping position",
+            "bedroom environment"
+        ]
+    },
+    {
+        "disease": "Fibromyalgia",
+        "symptoms": [
+            "widespread pain",
+            "fatigue",
+            "sleep problems",
+            "cognitive difficulties",
+            "headaches",
+            "depression",
+            "anxiety",
+            "stiffness"
+        ],
+        "treatments": [
+            "Pain medications",
+            "Antidepressants",
+            "Anticonvulsants",
+            "Physical therapy",
+            "Exercise",
+            "Stress reduction",
+            "Sleep hygiene"
+        ],
+        "causes": [
+            "genetics",
+            "infections",
+            "physical trauma",
+            "emotional stress",
+            "hormonal changes"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "stress",
+            "poor sleep",
+            "inactivity",
+            "diet"
+        ],
+        "environmental_factors": [
+            "weather changes",
+            "stressful environment"
+        ]
+    },
+    {
+        "disease": "Rheumatoid Arthritis",
+        "symptoms": [
+            "joint pain",
+            "joint swelling",
+            "morning stiffness",
+            "fatigue",
+            "fever",
+            "weight loss",
+            "joint deformity"
+        ],
+        "treatments": [
+            "DMARDs",
+            "Biologics",
+            "NSAIDs",
+            "Corticosteroids",
+            "Physical therapy",
+            "Surgery"
+        ],
+        "causes": [
+            "autoimmune disorder",
+            "genetics",
+            "environmental factors",
+            "hormones",
+            "smoking"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "smoking",
+            "diet",
+            "exercise",
+            "stress"
+        ],
+        "environmental_factors": [
+            "infections",
+            "exposure to toxins"
+        ]
+    },
+    {
+        "disease": "Chronic Migraine",
+        "symptoms": [
+            "severe headache",
+            "nausea",
+            "vomiting",
+            "sensitivity to light",
+            "sensitivity to sound",
+            "aura",
+            "dizziness"
+        ],
+        "treatments": [
+            "Triptans",
+            "NSAIDs",
+            "Preventive medications",
+            "Botox injections",
+            "Lifestyle changes",
+            "Stress management"
+        ],
+        "causes": [
+            "genetics",
+            "hormonal changes",
+            "stress",
+            "food triggers",
+            "sleep changes",
+            "weather changes"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic",
+            "episodic"
+        ],
+        "lifestyle_factors": [
+            "stress",
+            "sleep",
+            "diet",
+            "alcohol",
+            "caffeine"
+        ],
+        "environmental_factors": [
+            "weather",
+            "bright lights",
+            "strong smells"
+        ]
+    },
+    {
+        "disease": "Chronic Obstructive Pulmonary Disease",
+        "symptoms": [
+            "shortness of breath",
+            "chronic cough",
+            "wheezing",
+            "chest tightness",
+            "frequent respiratory infections",
+            "fatigue",
+            "weight loss"
+        ],
+        "treatments": [
+            "Bronchodilators",
+            "Inhaled steroids",
+            "Oxygen therapy",
+            "Pulmonary rehabilitation",
+            "Lung surgery",
+            "Lifestyle changes"
+        ],
+        "causes": [
+            "smoking",
+            "air pollution",
+            "genetics",
+            "occupational exposure",
+            "respiratory infections"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "smoking",
+            "inactivity",
+            "poor diet"
+        ],
+        "environmental_factors": [
+            "air pollution",
+            "occupational hazards",
+            "secondhand smoke"
+        ]
+    },
+    {
+        "disease": "Chronic Kidney Disease",
+        "symptoms": [
+            "fatigue",
+            "swelling",
+            "urination changes",
+            "nausea",
+            "shortness of breath",
+            "chest pain",
+            "high blood pressure"
+        ],
+        "treatments": [
+            "Blood pressure medications",
+            "Diabetes management",
+            "Dialysis",
+            "Kidney transplant",
+            "Dietary changes",
+            "Lifestyle modifications"
+        ],
+        "causes": [
+            "diabetes",
+            "high blood pressure",
+            "glomerulonephritis",
+            "polycystic kidney disease",
+            "urinary tract problems"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "diet",
+            "exercise",
+            "smoking",
+            "alcohol"
+        ],
+        "environmental_factors": [
+            "toxin exposure",
+            "medications"
+        ]
+    },
+    {
+        "disease": "Osteoarthritis",
+        "symptoms": [
+            "joint pain",
+            "stiffness",
+            "swelling",
+            "reduced range of motion",
+            "grating sensation",
+            "bone spurs"
+        ],
+        "treatments": [
+            "NSAIDs",
+            "Physical therapy",
+            "Exercise",
+            "Weight loss",
+            "Joint injections",
+            "Surgery"
+        ],
+        "causes": [
+            "aging",
+            "joint injury",
+            "obesity",
+            "genetics",
+            "bone deformities",
+            "metabolic diseases"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "obesity",
+            "inactivity",
+            "repetitive stress",
+            "diet"
+        ],
+        "environmental_factors": [
+            "occupational hazards",
+            "sports injuries"
+        ]
+    },
+    {
+        "disease": "Depression",
+        "symptoms": [
+            "persistent sadness",
+            "loss of interest",
+            "fatigue",
+            "sleep problems",
+            "appetite changes",
+            "difficulty concentrating",
+            "feelings of worthlessness"
+        ],
+        "treatments": [
+            "Antidepressants",
+            "Psychotherapy",
+            "Cognitive behavioral therapy",
+            "Exercise",
+            "Light therapy",
+            "Lifestyle changes"
+        ],
+        "causes": [
+            "genetics",
+            "brain chemistry",
+            "hormones",
+            "life events",
+            "medical conditions",
+            "substance abuse"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly",
+            "teen"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "episodic",
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "stress",
+            "sleep",
+            "exercise",
+            "social isolation",
+            "diet"
+        ],
+        "environmental_factors": [
+            "trauma",
+            "loss",
+            "work stress",
+            "relationship issues"
+        ]
+    },
+    {
+        "disease": "Anxiety Disorders",
+        "symptoms": [
+            "excessive worry",
+            "restlessness",
+            "fatigue",
+            "difficulty concentrating",
+            "irritability",
+            "muscle tension",
+            "sleep problems"
+        ],
+        "treatments": [
+            "Antidepressants",
+            "Anti-anxiety medications",
+            "Psychotherapy",
+            "Cognitive behavioral therapy",
+            "Relaxation techniques",
+            "Lifestyle changes"
+        ],
+        "causes": [
+            "genetics",
+            "brain chemistry",
+            "personality",
+            "life events",
+            "medical conditions",
+            "substance abuse"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly",
+            "teen"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "episodic",
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "stress",
+            "caffeine",
+            "alcohol",
+            "sleep",
+            "exercise"
+        ],
+        "environmental_factors": [
+            "work stress",
+            "trauma",
+            "life changes",
+            "social situations"
+        ]
+    },
+    {
+        "disease": "Chronic Back Pain",
+        "symptoms": [
+            "persistent back pain",
+            "stiffness",
+            "muscle spasms",
+            "limited mobility",
+            "radiating pain",
+            "numbness",
+            "tingling"
+        ],
+        "treatments": [
+            "Physical therapy",
+            "Pain medications",
+            "Exercise",
+            "Massage therapy",
+            "Chiropractic care",
+            "Surgery",
+            "Lifestyle modifications"
+        ],
+        "causes": [
+            "muscle strain",
+            "herniated disc",
+            "arthritis",
+            "osteoporosis",
+            "poor posture",
+            "injury"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "sedentary lifestyle",
+            "poor posture",
+            "obesity",
+            "lifting"
+        ],
+        "environmental_factors": [
+            "work environment",
+            "ergonomics",
+            "repetitive movements"
+        ]
+    },
+    {
+        "disease": "Psoriasis",
+        "symptoms": [
+            "red patches",
+            "silver scales",
+            "dry cracked skin",
+            "itching",
+            "burning",
+            "thickened nails",
+            "swollen joints"
+        ],
+        "treatments": [
+            "Topical treatments",
+            "Light therapy",
+            "Oral medications",
+            "Biologics",
+            "Lifestyle changes",
+            "Stress management"
+        ],
+        "causes": [
+            "immune system",
+            "genetics",
+            "triggers",
+            "stress",
+            "infections",
+            "medications"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic",
+            "episodic"
+        ],
+        "lifestyle_factors": [
+            "stress",
+            "diet",
+            "alcohol",
+            "smoking",
+            "obesity"
+        ],
+        "environmental_factors": [
+            "weather",
+            "infections",
+            "skin injury",
+            "medications"
+        ]
+    },
+    {
+        "disease": "Hypothyroidism",
+        "symptoms": [
+            "fatigue",
+            "weight gain",
+            "cold intolerance",
+            "dry skin",
+            "hair loss",
+            "constipation",
+            "depression",
+            "memory problems"
+        ],
+        "treatments": [
+            "Thyroid hormone replacement",
+            "Regular monitoring",
+            "Dietary changes",
+            "Exercise",
+            "Lifestyle modifications"
+        ],
+        "causes": [
+            "autoimmune disease",
+            "thyroid surgery",
+            "radiation therapy",
+            "medications",
+            "congenital",
+            "pituitary disorders"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "diet",
+            "exercise",
+            "stress",
+            "sleep"
+        ],
+        "environmental_factors": [
+            "iodine deficiency",
+            "radiation exposure"
+        ]
+    },
+    {
+        "disease": "Chronic Sinusitis",
+        "symptoms": [
+            "nasal congestion",
+            "facial pain",
+            "headache",
+            "postnasal drip",
+            "reduced sense of smell",
+            "fatigue",
+            "cough"
+        ],
+        "treatments": [
+            "Nasal corticosteroids",
+            "Saline irrigation",
+            "Antibiotics",
+            "Decongestants",
+            "Surgery",
+            "Allergy treatment"
+        ],
+        "causes": [
+            "allergies",
+            "nasal polyps",
+            "deviated septum",
+            "respiratory infections",
+            "immune system disorders"
+        ],
+        "age_groups": [
+            "adult",
+            "elderly"
+        ],
+        "severity_levels": [
+            "mild",
+            "moderate",
+            "severe"
+        ],
+        "duration_patterns": [
+            "chronic"
+        ],
+        "lifestyle_factors": [
+            "smoking",
+            "allergies",
+            "immune health"
+        ],
+        "environmental_factors": [
+            "air pollution",
+            "allergens",
+            "weather changes"
+        ]
+    }
+]

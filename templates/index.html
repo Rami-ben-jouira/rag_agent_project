@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis System - Professional Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .checkbox-item:hover {
+            background: #e9ecef;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: none;
+        }
+
+        .result-section.show {
+            display: block;
+        }
+
+        .result-header {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .result-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Medical Diagnosis System</h1>
+            <p>Advanced AI-Powered Medical Analysis with Structured Input</p>
+        </div>
+
+        <div class="content">
+            <div class="info-box">
+                <p><strong>Professional Medical Analysis System</strong></p>
+                <p>Enter detailed patient information for comprehensive diagnosis using AI-powered graph analysis.</p>
+            </div>
+
+            <form id="diagnosisForm">
+                <!-- Symptom Description -->
+                <div class="form-section">
+                    <h2>1. Symptom Description <span class="required">*</span></h2>
+                    <div class="form-group">
+                        <label for="symptoms">Describe the symptoms in detail:</label>
+                        <textarea 
+                            id="symptoms" 
+                            name="symptoms" 
+                            placeholder="e.g., Persistent fatigue, joint pain in hands and knees, morning stiffness lasting more than an hour..."
+                            required></textarea>
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div class="form-section">
+                    <h2>2. Duration</h2>
+                    <div class="form-group">
+                        <label for="duration">How long have these symptoms been present?</label>
+                        <select id="duration" name="duration">
+                            <option value="">Select duration...</option>
+                            <option value="Less than 1 week">Less than 1 week</option>
+                            <option value="1-2 weeks">1-2 weeks</option>
+                            <option value="2-4 weeks">2-4 weeks</option>
+                            <option value="1-3 months">1-3 months</option>
+                            <option value="3-6 months">3-6 months</option>
+                            <option value="6-12 months">6-12 months</option>
+                            <option value="More than 1 year">More than 1 year</option>
+                            <option value="Chronic (ongoing)">Chronic (ongoing)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Severity -->
+                <div class="form-section">
+                    <h2>3. Severity</h2>
+                    <div class="form-group">
+                        <label for="severity">Rate the severity of symptoms:</label>
+                        <select id="severity" name="severity">
+                            <option value="">Select severity...</option>
+                            <option value="Mild">Mild - Noticeable but not interfering with daily activities</option>
+                            <option value="Moderate">Moderate - Affecting daily activities but manageable</option>
+                            <option value="Severe">Severe - Significantly impacting daily life</option>
+                            <option value="Very Severe">Very Severe - Unable to perform normal activities</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Age Group -->
+                <div class="form-section">
+                    <h2>4. Age Group</h2>
+                    <div class="form-group">
+                        <label for="age_group">Patient age group:</label>
+                        <select id="age_group" name="age_group">
+                            <option value="">Select age group...</option>
+                            <option value="Child (0-12 years)">Child (0-12 years)</option>
+                            <option value="Teen (13-19 years)">Teen (13-19 years)</option>
+                            <option value="Adult (20-64 years)">Adult (20-64 years)</option>
+                            <option value="Elderly (65+ years)">Elderly (65+ years)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Factors -->
+                <div class="form-section">
+                    <h2>5. Lifestyle Factors</h2>
+                    <div class="form-group">
+                        <label>Select all that apply:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_sedentary" name="lifestyle_factors" value="Sedentary lifestyle">
+                                <label for="lifestyle_sedentary">Sedentary lifestyle</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_smoking" name="lifestyle_factors" value="Smoking">
+                                <label for="lifestyle_smoking">Smoking</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_alcohol" name="lifestyle_factors" value="Regular alcohol consumption">
+                                <label for="lifestyle_alcohol">Regular alcohol consumption</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_poor_diet" name="lifestyle_factors" value="Poor diet">
+                                <label for="lifestyle_poor_diet">Poor diet</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_stress" name="lifestyle_factors" value="High stress">
+                                <label for="lifestyle_stress">High stress</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_poor_sleep" name="lifestyle_factors" value="Poor sleep quality">
+                                <label for="lifestyle_poor_sleep">Poor sleep quality</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_obesity" name="lifestyle_factors" value="Obesity">
+                                <label for="lifestyle_obesity">Obesity</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lifestyle_exercise" name="lifestyle_factors" value="Regular exercise">
+                                <label for="lifestyle_exercise">Regular exercise</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environmental Context -->
+                <div class="form-section">
+                    <h2>6. Environmental Context</h2>
+                    <div class="form-group">
+                        <label>Select relevant environmental factors:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_pollen" name="environmental_context" value="High pollen season">
+                                <label for="env_pollen">High pollen season</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_pollution" name="environmental_context" value="Air pollution">
+                                <label for="env_pollution">Air pollution</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_work_stress" name="environmental_context" value="Work-related stress">
+                                <label for="env_work_stress">Work-related stress</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_weather" name="environmental_context" value="Weather changes">
+                                <label for="env_weather">Weather changes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_allergens" name="environmental_context" value="Exposure to allergens">
+                                <label for="env_allergens">Exposure to allergens</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_occupational" name="environmental_context" value="Occupational hazards">
+                                <label for="env_occupational">Occupational hazards</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_recent_travel" name="environmental_context" value="Recent travel">
+                                <label for="env_recent_travel">Recent travel</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="env_social_isolation" name="environmental_context" value="Social isolation">
+                                <label for="env_social_isolation">Social isolation</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    🔍 Analyze Symptoms
+                </button>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>AI agents are analyzing your input... This may take 10-15 seconds.</p>
+            </div>
+
+            <div class="error" id="error"></div>
+
+            <div class="result-section" id="resultSection">
+                <div class="result-header">
+                    📊 Analysis Results
+                </div>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('diagnosisForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                symptoms: document.getElementById('symptoms').value,
+                duration: document.getElementById('duration').value,
+                severity: document.getElementById('severity').value,
+                age_group: document.getElementById('age_group').value,
+                lifestyle_factors: Array.from(document.querySelectorAll('input[name="lifestyle_factors"]:checked')).map(cb => cb.value),
+                environmental_context: Array.from(document.querySelectorAll('input[name="environmental_context"]:checked')).map(cb => cb.value)
+            };
+
+            // Validate
+            if (!formData.symptoms.trim()) {
+                alert('Please enter symptom description');
+                return;
+            }
+
+            // Show loading, hide results
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('resultSection').classList.remove('show');
+            document.getElementById('error').classList.remove('show');
+            document.getElementById('submitBtn').disabled = true;
+
+            try {
+                const response = await fetch('/api/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    document.getElementById('resultContent').textContent = data.result;
+                    document.getElementById('resultSection').classList.add('show');
+                } else {
+                    document.getElementById('error').textContent = 'Error: ' + (data.error || 'Unknown error');
+                    document.getElementById('error').classList.add('show');
+                }
+            } catch (error) {
+                document.getElementById('error').textContent = 'Network error: ' + error.message;
+                document.getElementById('error').classList.add('show');
+            } finally {
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('submitBtn').disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
+
